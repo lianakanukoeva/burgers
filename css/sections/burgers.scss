@@ -1,0 +1,187 @@
+.burgers {
+    @include tablets {
+        display: none;
+    }
+}
+
+.slider {
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    max-width: 1300px;
+    max-height: 100%;
+}
+
+.slider__list {
+    display: flex;
+}
+
+.slider__item {
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 1300px;
+    transition: margin-left 1s ease;
+    display: flex;
+    justify-content: center;
+    transform: translateY(60%);
+    @include tablets {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .slider__right {
+        position: relative;
+        max-width: 40%;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-15%);
+        color: #fff;
+        p {
+            @include tablets {
+                font-size: rem(14px);
+                text-align: center;
+            }
+        }
+        h2 {
+            font-family: Gagalin;
+            font-size: rem(70px);
+            width: rem(500px);
+            line-height: 1;
+            margin-bottom: 0;
+            @include tablets {
+                font-size: rem(40px);
+                text-align: center;
+            }
+        }
+        .span-down {
+            display: flex;
+            align-items: center;
+            color: $a_hover;
+            .down-p {
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-end;
+                .p-500 {
+                    font-family: Gagalin;
+                    font-size: rem(70px);
+                    margin-bottom: 40px;
+                    @include tablets {
+                        font-size: rem(40px);
+                    }
+                }
+                .p-cent {
+                    padding-bottom: 10%;
+                    font-family: Gagalin;
+                    font-size: rem(35px);
+                    @include tablets {
+                        font-size: rem(20px);
+                    }
+                }
+            }
+            .burger-slider {
+                padding-left: 10%;
+                padding-top: 5%;
+            }
+        }
+    }
+    .slider__left {
+        position: relative;
+        max-width: 40%;
+        display: flex;
+        flex-direction: column;
+        .span-burger img {
+            max-width: rem(500px);
+            transform: translateY(-12%);
+        }
+        font-family: Gagalin;
+        color: #fff;
+        .sost {
+            margin-top: -13%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            padding: rem(10px);
+            width: rem(100px);
+            background-color: $a;
+            border-radius: 5px;
+            z-index: 15;
+            &:hover {
+                background-color: $a_hover;
+                cursor: pointer;
+            }
+            .sost__p {
+                padding-left: 20%;
+            }
+            .sost__ul {
+                display: none;
+            }
+            .sost__ul__active {
+                display: block;
+                .li_close {
+                    position: absolute;
+                    right: rem(-10px);
+                    top: rem(-10px);
+                }
+                left: rem(100px);
+                top: 1.3em;
+                position: absolute;
+                background-color: #fff;
+                border-radius: 5px;
+                img {
+                    height: 100%;
+                    padding: rem(10px);
+                }
+            }
+        }
+    }
+    .kkal {
+        position: absolute;
+        max-width: rem(100px);
+        display: flex;
+        flex-direction: column;
+        margin-top: -4%;
+        bottom: 25%;
+        .kkal__img {
+            position: absolute;
+            top: -25px;
+            left: -5px;
+        }
+        .kkal__p {
+            margin-top: -60%;
+        }
+        .kkal-1200 {
+            font-size: rem(23px);
+            padding: 0% 20% 0 20%;
+            margin: 45% 0;
+        }
+        .kkal-p {
+            padding-top: 15%;
+            text-align: center;
+        }
+    }
+}
+
+.slider__control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(50px);
+    height: rem(50px);
+    cursor: pointer;
+    padding: rem(10px);
+    transition: all 0.1s ease;
+}
+
+.right {
+    transition: all 0.1s ease;
+    right: 0;
+    transform: rotate(-90deg);
+}
+
+.left {
+    transition: all 0.1s ease;
+    left: 0;
+    transform: rotate(90deg);
+}

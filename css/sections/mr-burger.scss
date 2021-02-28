@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+}
+
+.general {
+    max-width: rem(940px);
+    width: 100%;
+    position: relative;
+    vertical-align: middle;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablets {
+        width: 95%;
+        margin: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    @include phone {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+.header {
+    position: relative;
+    width: 100%
+}
+
+.panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+    &__logo {
+        margin-top: 1%;
+    }
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+        white-space: nowrap;
+        margin-top: rem(45px);
+    }
+}
+
+nav li {
+    display: inline-block;
+    color: $grey;
+    margin-right: rem(10px);
+}
+
+nav a {
+    margin-left: rem(12px);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $grey;
+    &:hover {
+        color: $white;
+    }
+}
+
+@include tablets {
+    nav {
+        display: none;
+    }
+}
+
+.before li+li:before {
+    content: "•";
+    color: $white;
+}
+
+.button {
+    a {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: $a;
+        border-radius: 5px;
+        padding: rem(10px);
+        &:hover {
+            background-color: $a_hover;
+        }
+        @include tablets {
+            font-size: 30px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.ab {
+    display: flex;
+    justify-content: center;
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include tablets {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: -5%;
+        }
+    }
+    @include tablets {
+        // margin-right: 20%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+    @include phone {
+        margin: 0;
+    }
+    .burger {
+        @include tablets {
+            width: 80%;
+            img {
+                padding-left: rem(50px);
+                width: 85%;
+            }
+        }
+    }
+    .name {
+        margin-top: rem(100px);
+        flex-direction: column;
+        @include tablets {
+            margin: 0;
+            text-align: center;
+            font-size: rem(55px);
+        }
+        &__el1 {
+            font-family: Gagalin;
+            font-size: rem(70px);
+            color: $name;
+            @include tablets {
+                line-height: rem(50px);
+                margin-top: rem(30px);
+            }
+        }
+        &__el2 {
+            font-family: Lifehack;
+            font-size: rem(70px);
+            line-height: 50px;
+            color: $white;
+        }
+    }
+}
+
+.down {
+    margin-top: 10%;
+    // width: 20%;
+    @include tablets {
+        // margin-right: 25%;
+        margin-top: 4%;
+        img {
+            width: 6%;
+        }
+    }
+}
+
+.down a {
+    margin-left: 45%;
+}

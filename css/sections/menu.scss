@@ -1,0 +1,102 @@
+.menu {
+    position: relative;
+}
+
+.cont {
+    width: 960px;
+    padding-left: rem(10px);
+    padding-right: rem(10px);
+    margin: auto;
+}
+
+.menu__h1 {
+    text-align: left;
+    padding-top: rem(100px);
+    font-family: Gagalin;
+    font-size: 42pt;
+    color: $white;
+    @include tablets {
+        margin-left: rem(50px);
+    }
+}
+
+.menu__accordeon {
+    @include tablets {}
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    .accordeon {
+        display: flex;
+        .acc-h1 {
+            position: relative;
+            width: rem(80px);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 42px;
+            font-family: Gagalin;
+            color: $white;
+            cursor: pointer;
+            span {
+                padding-left: rem(50px);
+                white-space: nowrap;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                transform: rotate(-90deg);
+            }
+        }
+        .acc__inform {
+            max-width: 540px;
+            text-align: justify;
+            background-color: $comment;
+            width: 0;
+            p {
+                color: $white;
+                overflow: hidden;
+                @include tablets {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    .accordeon__active {
+        display: flex;
+        .acc-h1 {
+            position: relative;
+            width: rem(80px);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 42px;
+            font-family: Gagalin;
+            color: $name;
+            cursor: pointer;
+            span {
+                padding-left: rem(50px);
+                white-space: nowrap;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                transform: rotate(-90deg);
+            }
+        }
+        .acc__inform {
+            max-width: 540px;
+            text-align: justify;
+            background-color: $comment;
+            width: 0;
+            visibility: visible;
+            width: auto;
+            p {
+                padding: rem(10px);
+            }
+        }
+    }
+}

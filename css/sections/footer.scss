@@ -1,0 +1,48 @@
+.footer
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.contacts
+{
+	padding: rem(5px);
+	padding-left: rem(45px);
+	.address
+	{
+		color: $white;
+	}
+
+	.phone
+	{
+		display: flex;
+		p
+		{
+			margin-left: rem(5px);
+			color: $phone;
+			font-weight: bold;
+		}
+	}
+}
+
+.social
+{
+	padding-right: rem(50px);
+	.icons
+	{
+		width: rem(25px);
+		height: rem(25px);
+		display: inline-block;
+		fill: $comment;
+		margin-left: rem(20px);
+		&:hover
+		{
+			fill: #fff;
+			transform: scale(1.4);
+			cursor: pointer;
+		}
+	}
+}
+

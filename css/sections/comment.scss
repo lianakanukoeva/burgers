@@ -1,0 +1,70 @@
+.comment {
+    width: 100%;
+    height: 100vh;
+    .comment__gen {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .comment__gen__photo {
+            min-height: 50vh;
+            width: 25%;
+            @include tablets {
+                height: 25vh;
+                width: 50%;
+            }
+            filter: grayscale(100%);
+            @each $num in (1, 2, 3, 4, 5, 6, 7, 8) {
+                .comment__gen__photo__bg#{$num} {
+                    height: 100%;
+                    width: 100%;
+                    background: url(..//img/photo#{$num}.jpg) 100% 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                }
+                .rep {
+                    background-size: cover;
+                }
+            }
+        }
+        .comment__gen__inf {
+            height: 100%;
+            width: 100%;
+            background-color: $comment;
+            &__name {
+                padding: rem(25px);
+                font-family: Gagalin;
+                color: $white;
+                @include tablets {
+                    font-size: 30px;
+                }
+            }
+            &__text {
+                padding-left: rem(25px);
+                padding-right: rem(25px);
+                text-align: justify;
+                color: $white;
+                @include tablets {
+                    display: none;
+                }
+            }
+            .comments {
+                padding: rem(25px);
+                @include tablets {
+                    font-size: 30px;
+                }
+                .comment__gen__inf__button__a {
+                    color: $white;
+                    border-radius: 10px;
+                    padding: rem(10px);
+                    background-color: $best;
+                    text-decoration: none;
+                    &:hover {
+                        background-color: $chover;
+                    }
+                }
+            }
+        }
+    }
+}
